@@ -1,0 +1,434 @@
+body, html {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+nav {
+    background-color: #3498db;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav .container {
+    padding: 0 20px;
+}
+
+.back-button {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    transition: opacity 0.3s ease;
+}
+
+.back-button:hover {
+    opacity: 0.8;
+}
+
+.back-button i {
+    margin-right: 5px;
+}
+
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.address {
+    color: #666;
+    font-style: italic;
+}
+
+.image-gallery {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.image-gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.details {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.price-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.price {
+    font-size: 32px;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.expenses {
+    color: #7f8c8d;
+    margin: 5px 0 0;
+}
+
+.property-features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.feature i {
+    font-size: 24px;
+    color: #3498db;
+    margin-bottom: 5px;
+}
+
+.feature span {
+    font-size: 14px;
+    color: #34495e;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .image-gallery {
+        height: 300px;
+    }
+    
+    .property-features {
+        flex-direction: column;
+    }
+}
+
+/* Estilos previos... */
+
+.image-carousel {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.carousel-slide {
+    display: flex;
+    width: 500%; /* 100% * 5 imágenes */
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide img {
+    width: 20%; /* 100% / 5 imágenes */
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+/* Resto de los estilos... */
+
+@media (max-width: 768px) {
+    .carousel-container {
+        height: 300px;
+    }
+    
+    /* Otros estilos responsivos... */
+}
+
+
+
+/* Estilos previos sin cambios... */
+
+.details {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.price-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.price {
+    font-size: 32px;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.expenses {
+    color: #7f8c8d;
+    margin: 5px 0 0;
+}
+
+.property-features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.feature {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+}
+
+.feature i {
+    font-size: 24px;
+    color: #3498db;
+    margin-bottom: 5px;
+}
+
+.feature span {
+    font-size: 14px;
+    color: #34495e;
+}
+
+.room-description {
+    padding-top: 20px;
+}
+
+.room-description h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.room-description p {
+    color: #34495e;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.room-description ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.room-description li {
+    color: #34495e;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.room-description li::before {
+    content: "\2022";
+    color: #3498db;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
+@media (max-width: 768px) {
+    .property-features {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .feature {
+        flex-direction: row;
+        justify-content: flex-start;
+        width: 100%;
+        margin: 5px 0;
+    }
+    
+    .feature i {
+        margin-right: 10px;
+        margin-bottom: 0;
+    }
+}
+.detailed-info {
+    padding-top: 20px;
+}
+
+.detailed-info h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.info-table th,
+.info-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.info-table th {
+    background-color: #f8f9fa;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.info-table td {
+    color: #34495e;
+}
+
+.info-table tr:last-child td {
+    border-bottom: none;
+}
+
+.info-table i {
+    margin-right: 10px;
+    color: #3498db;
+}
+
+/* Estilos responsivos para la tabla */
+@media (max-width: 768px) {
+    .info-table,
+    .info-table thead,
+    .info-table tbody,
+    .info-table th,
+    .info-table td,
+    .info-table tr {
+        display: block;
+    }
+    
+    .info-table thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+    
+    .info-table tr {
+        border: 1px solid #ccc;
+        margin-bottom: 10px;
+    }
+    
+    .info-table td {
+        border: none;
+        border-bottom: 1px solid #eee;
+        position: relative;
+        padding-left: 50%;
+    }
+    
+    .info-table td:before {
+        content: attr(data-label);
+        position: absolute;
+        left: 6px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        font-weight: bold;
+    }
+    
+    .info-table td:last-child {
+        border-bottom: 0;
+    }
+}
+/* Estilos previos sin cambios... */
+
+.map-container {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    margin: 20px 0; /* Agregar margen superior e inferior opcional */
+   
+}
+
+h1{
+text-align: center;
+font-size: 150%;
+}
+
+
+
+
+/* House Rules */
+.house-rules h3 {
+    font-size: 24px;
+    color: #2980b9;
+}
+
+.house-rules ul li {
+    padding-left: 20px;
+    position: relative;
+}
+/* Contenedor principal para centrar */
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh; /* Hace que ocupe toda la altura de la pantalla */
+}
+
+/* Contenedor de la imagen cuadrada */
+.image-container {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
